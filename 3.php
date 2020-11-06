@@ -35,7 +35,7 @@ private function setImgSrc(&$arBasketItems, $arElementId, $arSku2Parent)
         $arImage = null;
 
         if ($arProductData[$arItem["PRODUCT_ID"]]["PROPERTY_ARTICLE_VALUE"]) {
-            $arItem["PICTURE_SRC"] = "/upload/photo/".$arProductData[$arItem["PRODUCT_ID"]]["PROPERTY_CODE_VALUE"].".jpg";
+            $arItem["PICTURE_SRC"] = "/upload/photo/".$arProductData[$arItem["PRODUCT_ID"]]["PROPERTY_ARTICLE_VALUE"].".jpg";
         } else {
             if (isset($arItem["PREVIEW_PICTURE"]) && intval($arItem["PREVIEW_PICTURE"]) > 0)
                 $arImage = CFile::GetFileArray($arItem["PREVIEW_PICTURE"]);

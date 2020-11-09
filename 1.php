@@ -12,7 +12,7 @@ if (CModule::IncludeModule("sale")) {
     ])->Fetch();
 
     if ($prop) {
-        return CSaleOrderPropsValue::Update($prop["ID"], [
+        CSaleOrderPropsValue::Update($prop["ID"], [
             "VALUE" => $newVal
         ]);
     }
